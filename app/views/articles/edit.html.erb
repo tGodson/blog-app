@@ -1,19 +1,21 @@
-<h1>Create an article</h1>
-
-<%= form_with scope: :article, url: articles_path, local: true do |form| %>
+<h1>Edit Article</h1>
+ 
+<%= form_with(model: @article, local: true) do |form| %>
+ 
   <p>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
   </p>
  
   <p>
-    <%= form.label :body %><br>
+    <%= form.label :text %><br>
     <%= form.text_area :body %>
   </p>
  
   <p>
-    <%= form.submit "create article" %>
+    <%= form.submit %>
   </p>
+ 
 <% end %>
-
+ 
 <%= link_to 'Back', articles_path %>
